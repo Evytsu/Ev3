@@ -9,7 +9,7 @@ import random
 ev3 = EV3Brick()
 
 test_motor = Motor(Port.A)
-test_motorb = Motor(Port.B)
+test_motorb = Motor(Port.C)
 
 ev3.speaker.set_speech_options('en', 'f1', 10, 10)
 ev3.speaker.say('<3')
