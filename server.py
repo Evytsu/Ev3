@@ -8,7 +8,7 @@ from pybricks.parameters import Port as Evport
 
 ev3 = EV3Brick()
 motora = Motor(Evport.A)
-motorb = Motor(Evport.B)
+motorb = Motor(Evport.C)
 
 try:
     ev3.speaker.beep(500, 2000)
