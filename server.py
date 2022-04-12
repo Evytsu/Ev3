@@ -20,7 +20,7 @@ except Exception as e:
 PORT = 57182
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-s.bind((s.getsockname()[0], PORT))
+s.bind(("ev3dev", PORT))
 s.listen(5)
 
 running = True
