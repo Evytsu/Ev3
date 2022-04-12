@@ -28,6 +28,6 @@ test_motorb.run(1000)
 
 while True:
     time.sleep(2)
-    test_motor.run(random.randint(1, 1050))
-    test_motorb.run(random.randint(1, 1050))
+    test_motor.run(random.randint(-1050, 1050))
+    test_motorb.run(random.randint(-1050, 1050))
     ev3.speaker.beep(frequency=1000, duration=5000)
