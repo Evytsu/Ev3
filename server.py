@@ -125,7 +125,7 @@ while running:
 
         elif do == 'scream':
             try:
-                ev3.speaker.beep(500, 4000)
+                ev3.speaker.play_file('barata.wav')
             except Exception as e:
                 pass
                 #print(e)
