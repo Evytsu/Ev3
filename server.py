@@ -87,12 +87,12 @@ while running:
             else:
                 running_event = do
                 if direction == 'forward':
-                    motora.run(-250)
-                    motorc.run(-1000)
+                    motora.run(-1000)
+                    motorc.run(-250)
                     #print('MA_speed = 750; MB_speed = 1000')
                 else:
-                    motora.run(250)
-                    motorc.run(1000)
+                    motora.run(1000)
+                    motorc.run(250)
                     #print('MA_speed = -750; MB_speed = -1000')
 
         elif do == 'MB1':
@@ -103,12 +103,12 @@ while running:
             else:
                 running_event = do
                 if direction == 'forward':
-                    motorc.run(-250)
-                    motora.run(-1000)
+                    motorc.run(-1000)
+                    motora.run(-250)
                     #print('MB_speed = 750; MA_speed = 1000')
                 else:
-                    motorc.run(250)
-                    motora.run(1000)
+                    motorc.run(1000)
+                    motora.run(250)
                     #print('MB_speed = -750; MA_speed = -1000')
 
         elif do == 'MAB-1':
