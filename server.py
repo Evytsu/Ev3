@@ -87,7 +87,7 @@ while running:
             else:
                 running_event = do
                 if direction == 'forward':
-                    motora.run-250)
+                    motora.run(-250)
                     motorc.run(-1000)
                     #print('MA_speed = 750; MB_speed = 1000')
                 else:
