@@ -8,7 +8,7 @@ from pybricks.parameters import Port as Evport
 
 ev3 = EV3Brick()
 motora = Motor(Evport.A)
-motorb = Motor(Evport.C)
+motorc = Motor(Evport.C)
 
 try:
     ev3.speaker.beep(500, 2000)
@@ -43,7 +43,7 @@ while running:
 
     def stop():
         motora.stop()
-        motorb.stop()
+        motorc.stop()
     
 
     while clientsocket:
@@ -75,7 +75,7 @@ while running:
             else:
                 running_event = do
                 motora.run(1000)
-                motorb.run(1000)
+                motorc.run(1000)
                 #print('Moving forward')
 
         elif do == 'MA1':
@@ -87,11 +87,11 @@ while running:
                 running_event = do
                 if direction == 'forward':
                     motora.run(750)
-                    motorb.run(1000)
+                    motorc.run(1000)
                     #print('MA_speed = 750; MB_speed = 1000')
                 else:
                     motora.run(-750)
-                    motorb.run(-1000)
+                    motorc.run(-1000)
                     #print('MA_speed = -750; MB_speed = -1000')
 
         elif do == 'MB1':
@@ -102,11 +102,11 @@ while running:
             else:
                 running_event = do
                 if direction == 'forward':
-                    motorb.run(750)
+                    motorc.run(750)
                     motora.run(1000)
                     #print('MB_speed = 750; MA_speed = 1000')
                 else:
-                    motorb.run(-750)
+                    motorc.run(-750)
                     motora.run(-1000)
                     #print('MB_speed = -750; MA_speed = -1000')
 
@@ -119,7 +119,7 @@ while running:
             else:
                 running_event = do
                 motora.run(-1000)
-                motorb.run(-1000)
+                motorc.run(-1000)
                 #print('Moving backwards')
 
         elif do == 'scream':
