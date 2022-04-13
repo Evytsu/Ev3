@@ -5,6 +5,8 @@ import re
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import Motor
 from pybricks.parameters import Port as Evport
+import threading
+from functools import partial
 
 ev3 = EV3Brick()
 motora = Motor(Evport.A)
@@ -125,7 +127,8 @@ while running:
 
         elif do == 'scream':
             try:
-                ev3.speaker.play_file('barata.wav')
+                #ev3.speaker.play_file('barata.wav')
+                threading.Thread(target=partial(ev3.speaker.play_file, 'barata.wav'))
             except Exception as e:
                 pass
                 #print(e)
