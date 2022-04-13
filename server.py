@@ -20,8 +20,9 @@ except Exception as e:
 PORT = 57182
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-s.bind(("ev3dev", PORT))
+s.bind(("192.168.44.28", PORT))
 s.listen(5)
+
 
 running = True
 while running:
@@ -74,8 +75,8 @@ while running:
                 stop()
             else:
                 running_event = do
-                motora.run(1000)
-                motorc.run(1000)
+                motora.run(-1000)
+                motorc.run(-1000)
                 #print('Moving forward')
 
         elif do == 'MA1':
@@ -86,12 +87,12 @@ while running:
             else:
                 running_event = do
                 if direction == 'forward':
-                    motora.run(750)
-                    motorc.run(1000)
+                    motora.run-250)
+                    motorc.run(-1000)
                     #print('MA_speed = 750; MB_speed = 1000')
                 else:
-                    motora.run(-750)
-                    motorc.run(-1000)
+                    motora.run(250)
+                    motorc.run(1000)
                     #print('MA_speed = -750; MB_speed = -1000')
 
         elif do == 'MB1':
@@ -102,12 +103,12 @@ while running:
             else:
                 running_event = do
                 if direction == 'forward':
-                    motorc.run(750)
-                    motora.run(1000)
+                    motorc.run(-250)
+                    motora.run(-1000)
                     #print('MB_speed = 750; MA_speed = 1000')
                 else:
-                    motorc.run(-750)
-                    motora.run(-1000)
+                    motorc.run(250)
+                    motora.run(1000)
                     #print('MB_speed = -750; MA_speed = -1000')
 
         elif do == 'MAB-1':
@@ -118,8 +119,8 @@ while running:
                 stop()
             else:
                 running_event = do
-                motora.run(-1000)
-                motorc.run(-1000)
+                motora.run(1000)
+                motorc.run(1000)
                 #print('Moving backwards')
 
         elif do == 'scream':
